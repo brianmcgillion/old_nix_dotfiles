@@ -15,7 +15,7 @@ with lib.my;
       binDir     = mkOpt path "${config.dotfiles.dir}/bin";
       configDir  = mkOpt path "${config.dotfiles.dir}/config";
       modulesDir = mkOpt path "${config.dotfiles.dir}/modules";
-      themesDir  = mkOpt path "${config.dotfiles.modulesDir}/themes";
+      # themesDir  = mkOpt path "${config.dotfiles.modulesDir}/themes";
     };
 
     home = {
