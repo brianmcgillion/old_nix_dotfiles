@@ -1,0 +1,5 @@
+#+TITLE: Host Configurations
+
+* Systems
++ hades (ThinkPad P15 Gen1)
++ Generic: linodes, VMs
