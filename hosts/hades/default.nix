@@ -7,16 +7,16 @@
   ## Modules
   modules = {
     desktop = {
-      browsers = {
-        default = "firefox";
-        firefox.enable = true;
-      };
+#      browsers = {
+#        default = "google-chrome";
+#        google-chrome.enable = true;
+#      };
       media = {
         documents.enable = true;
       };
       term = {
-        default = "xst";
-        st.enable = true;
+        default = "terminator";
+        terminator.enable = true;
       };
       vm = {
         qemu.enable = true;
@@ -74,4 +74,20 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+
+  fonts = {
+     fontDir.enable = true;
+     fonts = with pkgs; [
+          ubuntu_font_family
+          dejavu_fonts
+          noto-fonts
+          noto-fonts-cjk
+          noto-fonts-emoji
+          liberation_ttf
+          fira-code
+          fira-code-symbols
+          nerdfonts
+          symbola
+      ];
+  };
 }

@@ -1,0 +1,89 @@
+[global_config]
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
+  suppress_multiple_term_dialog = True
+[keybindings]
+[profiles]
+  [[default]]
+    background_color = "#1c1d1f"
+    background_darkness = 0.43
+    cursor_color = "#708284"
+    font = Fira Code 12
+    foreground_color = "#eeeeec"
+    scrollback_infinite = True
+    palette = "#56595c:#c94c22:#85981c:#b4881d:#2e8bce:#d13a82:#32a198:#c9c6bd:#45484b:#bd3613:#738a04:#a57705:#2176c7:#c61c6f:#259286:#c9c6bd"
+    use_system_font = False
+  [[Dracula]]
+    background_color = "#1c1d1f"
+    background_darkness = 0.43
+    cursor_color = "#708284"
+    font = Fira Code 12
+    foreground_color = "#708284"
+    scrollback_infinite = True
+    palette = "#56595c:#c94c22:#85981c:#b4881d:#2e8bce:#d13a82:#32a198:#c9c6bd:#45484b:#bd3613:#738a04:#a57705:#2176c7:#c61c6f:#259286:#c9c6bd"
+    use_system_font = False
+  [[Violet Dark]]
+    cursor_color = "#aaaaaa"
+    font = Fira Code 12
+    scrollback_infinite = True
+    use_system_font = False
+  [[old_default]]
+    background_darkness = 0.43
+    cursor_color = "#aaaaaa"
+    foreground_color = "#ffffff"
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+[layouts]
+  [[default]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 0:27
+      maximised = True
+      fullscreen = False
+      size = 1920, 1016
+      title = Terminator
+      last_active_term = 864337e2-4473-4bda-865c-1eb702af1257
+      last_active_window = True
+    [[[child1]]]
+      type = VPaned
+      parent = child0
+      order = 0
+      position = 506
+      ratio = 0.5004945598417408
+    [[[child2]]]
+      type = HPaned
+      parent = child1
+      order = 0
+      position = 958
+      ratio = 0.5002610966057441
+    [[[terminal3]]]
+      type = Terminal
+      parent = child2
+      order = 0
+      profile = default
+      uuid = 864337e2-4473-4bda-865c-1eb702af1257
+    [[[terminal4]]]
+      type = Terminal
+      parent = child2
+      order = 1
+      profile = default
+      uuid = ef53c455-43bc-4639-ba7b-c171d5baad47
+    [[[child5]]]
+      type = HPaned
+      parent = child1
+      order = 1
+      position = 958
+      ratio = 0.5002610966057441
+    [[[terminal6]]]
+      type = Terminal
+      parent = child5
+      order = 0
+      profile = default
+      uuid = a34fea6c-325c-49ad-a82f-e4896db57fb8
+    [[[terminal7]]]
+      type = Terminal
+      parent = child5
+      order = 1
+      profile = default
+      uuid = c1f6d392-4650-4856-a595-b14ba14fac37
+[plugins]
