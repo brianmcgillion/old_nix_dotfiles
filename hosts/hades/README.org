@@ -1,6 +1,37 @@
 #+TITLE: Kuro
 #+DATE:  September 13, 2020
 
+
+* TODO edit this correctly 
+
+sudo parted /dev/nvme1n1
+print
+rm <partitions>
+mklabel gpt
+mkpart primary 512MiB 100%
+mkpart ESP fat32 1MiB 512MiB
+set 2 esp on
+quit
+ 
+sudo mkfs.ext4 -L nixos /dev/nvme1n1p1
+sudo mkfs.fat -F 32 -n boot /dev/nvme1n1p2
+ 
+sudo mount /dev/disk//by-label/nixos /mnt
+sudo mkdir -p /mnt/boot
+sudo mount /dev/disk/by-label/boot /mnt/boot
+ 
+nix-shell -p git nixFlakes
+HOST=hades
+USER=brian
+sudo mv dotfiles/ /etc/dotfiles
+cd /etc/dotfiles/
+sudo USER=$USER nixos-install --root /mnt --impure --flake .#$HOST
+ 
+ 
+sudo mv /etc/dotfiles /mnt/etc/dotfiles
+
+
+
 * Overview
 My main driver for work on Linux.
 
