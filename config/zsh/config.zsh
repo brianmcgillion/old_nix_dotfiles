@@ -11,10 +11,6 @@ fi
 # we handle compinit ourselves...
 export ZGEN_AUTOLOAD_COMPINIT=0
 
-# zsh-vi-mode
-export ZVM_INIT_MODE=sourcing
-export ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
-
 # fasd
 export _FASD_DATA="$XDG_CACHE_HOME/fasd"
 export _FASD_VIMINFO="$XDG_CACHE_HOME/viminfo"
