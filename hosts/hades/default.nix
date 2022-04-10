@@ -24,7 +24,7 @@
     };
     dev = {
       rust.enable = false;
-      python.enable = true;
+      python.enable = false;
     };
     editors = {
       default = "emacs";
