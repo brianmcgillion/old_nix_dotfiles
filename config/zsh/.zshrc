@@ -1,6 +1,9 @@
 #!/usr/bin/env zsh
 source $ZDOTDIR/config.zsh
 
+#lazy load the shell functions
+fpath=( $ZDOTDIR/functions $fpath );
+
 # NOTE ZGEN_DIR and ZGEN_SOURCE are forward-declared in modules/shell/zsh.nix
 # NOTE Using zgenom because zgen is no longer maintained
 if [ ! -d "$ZGEN_DIR" ]; then
@@ -36,6 +39,8 @@ fi
 ## Bootstrap interactive sessions
 if [[ $TERM != dumb ]]; then
   autoload -Uz compinit && compinit -u -d $ZSH_CACHE/zcompdump
+  #include the shell functions directory
+  autoload -U $fpath[1]/*(.:t)
 
   source $ZDOTDIR/keybinds.zsh
   source $ZDOTDIR/completion.zsh

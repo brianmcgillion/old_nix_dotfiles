@@ -82,3 +82,13 @@ function r {
   local time=$1; shift
   sched "$time" "notify-send --urgency=critical 'Reminder' '$@'; ding";
 }; compdef r=sched
+
+#preview the file containing the searched for string
+function fp {
+    fzf --preview "bat --style=numbers --color=always --line-range :500 {}"
+}
+
+# open the preview file for editing
+function fo {
+    fp | xargs -r emacsclient -c
+}

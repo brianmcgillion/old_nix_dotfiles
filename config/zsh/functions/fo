@@ -1,0 +1,7 @@
+# Open the file found from the fp function in emacs
+
+# fo() {
+#     fp | xargs -r emacsclient -c
+# }
+
+# fo
