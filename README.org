@@ -1,0 +1,6 @@
+# dotfiles
+NixOS Based dotfiles
+
+Shamelessly coppied from https://github.com/hlissner/dotfiles, all errors are my own.
+
+Intention is to reduce the config to minimal, but bootstrapping my descent into NixOS.

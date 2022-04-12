@@ -1,11 +1,12 @@
-# dotfiles
-NixOS Based dotfiles
+#+title: TODO
 
-Shamelessly coppied from https://github.com/hlissner/dotfiles, all errors are my own.
 
-Intention is to reduce the config to minimal, but bootstrapping my descent into NixOS.
+* TODO
 
-TODO
+start emacs as a service
+
+command not found
+https://github.com/DamienCassou/home-manager/tree/master/modules/programs/command-not-found
 
 Fix cloning .config/emacs and .config/doom during the emacs setup (start with https clone and replace with git once keys are synced)
 
