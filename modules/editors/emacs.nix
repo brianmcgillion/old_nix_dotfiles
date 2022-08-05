@@ -66,6 +66,24 @@ in {
 
     fonts.fonts = [ pkgs.emacs-all-the-icons-fonts ];
 
+    systemd.user.services.emacs = {
+      description = "Emacs: the extensible, self-documenting text editor";
+
+      serviceConfig = {
+        Type = "forking";
+        # ExecStart = "${bigEmacs}/bin/emacs --daemon";
+        # Running Emacs this way ensures environment variable are accessible:
+        ExecStart =
+          "/etc/profiles/per-user/%u/bin/zsh -c 'source ${config.system.build.setEnvironment}; exec /etc/profiles/per-user/%u/bin/emacs --daemon'";
+        ExecStop =
+          "/etc/profiles/per-user/%u/bin/emacsclient --eval (kill-emacs)";
+        Restart = "always";
+      };
+
+      wantedBy = [ "default.target" ];
+
+    };
+
     # init.doomEmacs = mkIf cfg.doom.enable ''
     #   if [ -d $HOME/.config/emacs ]; then
     #      ${optionalString cfg.doom.fromSSH ''
